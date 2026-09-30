@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mini Game Hub</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🎮 Mini Game Hub
+        </div>
+
+        <button id="themeBtn" class="theme-btn">
+            🌙
+        </button>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <header class="hero">
+
+        <div>
+            <span class="badge">🎮 GAME CENTER</span>
+
+            <h1>
+                Mini Game
+                <span>Hub</span>
+            </h1>
+
+            <p>
+                Play fun mini games, collect points, and beat your high score!
+            </p>
+
+            <a href="#games" class="play-btn">
+                🚀 Play Games
+            </a>
+        </div>
+
+    </header>
+
+
+    <!-- SCORE -->
+    <section class="score-section">
+
+        <div class="score-card">
+            <div class="score-icon">🏆</div>
+            <div>
+                <small>Total Score</small>
+                <h2 id="totalScore">0</h2>
+            </div>
+        </div>
+
+        <div class="score-card">
+            <div class="score-icon">🎮</div>
+            <div>
+                <small>Games Played</small>
+                <h2 id="gamesPlayed">0</h2>
+            </div>
+        </div>
+
+        <div class="score-card">
+            <div class="score-icon">⭐</div>
+            <div>
+                <small>Best Score</small>
+                <h2 id="bestScore">0</h2>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- GAMES -->
+    <main id="games" class="container">
+
+        <div class="section-title">
+
+            <span>FUN & CHALLENGE</span>
+
+            <h2>Choose Your Game</h2>
+
+            <p>
+                Select a game and start playing!
+            </p>
+
+        </div>
+
+
+        <div class="games-grid">
+
+
+            <!-- NUMBER GUESSING -->
+            <section class="game-card">
+
+                <div class="game-icon">
+                    🎯
+                </div>
+
+                <h3>Number Guessing</h3>
+
+                <p>
+                    Guess the secret number between 1 and 10.
+                </p>
+
+                <input type="number" id="guessInput" min="1" max="10" placeholder="Enter 1 - 10">
+
+                <div class="buttons">
+
+                    <button onclick="checkGuess()">
+                        Guess
+                    </button>
+
+                    <button class="secondary" onclick="newGuessGame()">
+                        New Game
+                    </button>
+
+                </div>
+
+                <div id="guessResult" class="result">
+                    Start guessing!
+                </div>
+
+            </section>
+
+
+            <!-- RPS -->
+            <section class="game-card">
+
+                <div class="game-icon">
+                    ✊
+                </div>
+
+                <h3>Rock Paper Scissors</h3>
+
+                <p>
+                    Choose your move and challenge the computer.
+                </p>
+
+                <div class="rps">
+
+                    <button onclick="playRPS('Rock')">
+                        ✊
+                    </button>
+
+                    <button onclick="playRPS('Paper')">
+                        ✋
+                    </button>
+
+                    <button onclick="playRPS('Scissors')">
+                        ✌️
+                    </button>
+
+                </div>
+
+                <div id="rpsResult" class="result">
+                    Make your choice!
+                </div>
+
+            </section>
+
+
+            <!-- MEMORY -->
+            <section class="game-card">
+
+                <div class="game-icon">
+                    🧠
+                </div>
+
+                <h3>Memory Card</h3>
+
+                <p>
+                    Find all matching pairs.
+                </p>
+
+                <div id="memoryBoard" class="memory-board">
+                </div>
+
+                <button class="full-btn" onclick="startMemoryGame()">
+                    🔄 Restart
+                </button>
+
+                <div id="memoryResult" class="result">
+                    Find the matching cards!
+                </div>
+
+            </section>
+
+
+            <!-- DICE -->
+            <section class="game-card">
+
+                <div class="game-icon">
+                    🎲
+                </div>
+
+                <h3>Dice Roll</h3>
+
+                <p>
+                    Roll the dice and test your luck!
+                </p>
+
+                <div id="dice" class="big-dice">
+                    🎲
+                </div>
+
+                <button class="full-btn" onclick="rollDice()">
+                    🎲 Roll Dice
+                </button>
+
+                <div id="diceResult" class="result">
+                    Click Roll Dice!
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- HISTORY -->
+        <section class="history-card">
+
+            <div class="history-header">
+
+                <div>
+                    <span>YOUR ACTIVITY</span>
+                    <h2>📜 Game History</h2>
+                </div>
+
+                <button class="clear-btn" onclick="clearHistory()">
+                    Clear
+                </button>
+
+            </div>
+
+            <ul id="historyList">
+                <li class="empty">
+                    No games played yet.
+                </li>
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h3>🎮 Mini Game Hub</h3>
+
+        <p>
+            Have fun • Play smart • Beat your score
+        </p>
+
+        <small>
+            © 2026 Mini Game Hub
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
